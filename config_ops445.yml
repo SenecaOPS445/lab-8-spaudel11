@@ -2,7 +2,7 @@
 - hosts: myvm
   become: yes
   vars:
-    seneca_id: "spaudel11"  # CHANGE TO YOUR SENECA ID
+    seneca_id: "spaudel11"
   tasks:
     - name: Install EPEL
       yum:
