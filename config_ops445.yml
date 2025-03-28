@@ -1,0 +1,39 @@
+---
+- hosts: myvm
+  become: yes
+  vars:
+    seneca_id: "spaudel11"  # CHANGE TO YOUR SENECA ID
+  tasks:
+    - name: Install EPEL
+      yum:
+        name: epel-release
+        state: present
+
+    - name: Remove 'tree' package
+      yum:
+        name: tree
+        state: absent
+
+    - name: Set hostname
+      hostname:
+        name: "{{ seneca_id }}"
+
+    - name: Create user
+      user:
+        name: "{{ seneca_id }}"
+        groups: wheel
+        append: yes
+
+    - name: Setup SSH key
+      authorized_key:
+        user: "{{ seneca_id }}"
+        state: present
+        key: "{{ lookup('file', '/home/spaudel11/.ssh/id_rsa.pub') }}"
+
+    - name: Create lab directories
+      file:
+        path: "/home/{{ seneca_id }}/ops445/lab{{ item }}"
+        state: directory
+        owner: "{{ seneca_id }}"
+        group: "{{ seneca_id }}"
+      with_sequence: start=1 end=8
