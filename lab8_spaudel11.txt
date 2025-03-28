@@ -1,0 +1,64 @@
+
+PLAY [myvm] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [myvm]
+
+TASK [Install EPEL] ************************************************************
+ok: [myvm]
+
+TASK [Remove 'tree' package] ***************************************************
+ok: [myvm]
+
+TASK [Set hostname] ************************************************************
+ok: [myvm]
+
+TASK [Create user] *************************************************************
+ok: [myvm]
+
+TASK [Setup SSH key] ***********************************************************
+ok: [myvm]
+
+TASK [Create lab directories] **************************************************
+ok: [myvm] => (item=1)
+ok: [myvm] => (item=2)
+ok: [myvm] => (item=3)
+ok: [myvm] => (item=4)
+ok: [myvm] => (item=5)
+ok: [myvm] => (item=6)
+ok: [myvm] => (item=7)
+ok: [myvm] => (item=8)
+
+PLAY RECAP *********************************************************************
+myvm                       : ok=7    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+total 0
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab1
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab2
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab3
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab4
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab5
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab6
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab7
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab8
+/home/spaudel11/ops445/:
+total 0
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab1/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab2/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab3/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab4/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab5/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab6/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab7/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab8/
+
+/home/spaudel11/ops445/:
+total 0
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab1/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab2/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab3/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab4/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab5/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab6/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab7/
+drwxr-xr-x 2 spaudel11 spaudel11 6 Mar 28 16:00 lab8/
